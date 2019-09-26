@@ -75,24 +75,22 @@ sudo nano /var/www/html/sgce/system/application/config/constants.php
 
 CSVed - https://csved.sjfrancke.nl/
 
-
-
 ## Arquivo Modelo de CSV
 
 [Modelo CSV](modelo_csv.csv)
 
-
-
 ## Referências
 
-[Apresentação VWTICIFES 2011](docs/Apresentacao-VWTICIFES-2011.pdf)
+[Apresentação V Workshop de TIC das IFES - Unipampa 2011](docs/Apresentacao-VWTICIFES-2011.pdf)
 
-[Artigo VWTICIFES 2011](docs/Artigo-VWTICIFES-2011.pdf)
+[Artigo Sistema de Gestão de Certificado Eletrônicos 2011](docs/Artigo-VWTICIFES-2011.pdf)
 
-[Instalação](docs/instalacao-sgce.pdf)
+[Manual de Instalação Oficial - Unipampa 2016](docs/instalacao-sgce.pdf)
 
-[Manual](docs/manual-sgce.pdf)
+[Manual do Usuário Oficial - Unipampa 2016 ](docs/manual-sgce.pdf)
 
-[Manual UTFPR](docs/sgce_utfpr_organizador.pdf)
+[Manual SGCE IFRS 2014](docs/manual-sgce-ifrs.pdf)
+
+[Manual Organizador UTFPR 2017](docs/sgce_utfpr_organizador.pdf)
 
 
