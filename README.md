@@ -13,7 +13,7 @@ Entre com o comando $sudo passwd root, ele irá solicitar a senha que você cada
 ```bash
 sudo add-apt-repository ppa:ondrej/php 
 sudo apt-get update 
-sudo apt-get install apache2 php5.6 libapache2-mod-php5.6 postgresql php5.6-pgsql phppgadmin php-gettext php5.6-gd php5.6-mcrypt
+sudo apt-get install apache2 php5.6 libapache2-mod-php5.6 postgresql php5.6-pgsql phppgadmin php-gettext php5.6-gd php5.6-mcrypt php5.6-intl php5.6-cli php5.6-soap php5.6-curl php5.6-mbstring php5.6-xml php5.6-fpm
 ```
 
 ## Selecionar a versão padrão do PHP
