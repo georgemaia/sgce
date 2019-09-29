@@ -42,6 +42,18 @@ sudo nano /etc/php/5.6/php.ini
 short_open_tag = on
 ```
 
+## Ativar a biblioteca GD2
+
+Por padrão a biblioteca vem desativada. Para ativar, remova o comentário abaixo.
+
+```bash
+sudo nano /etc/php/5.6/php.ini
+```
+
+```apacheconf
+extension=php_gd2.dll 
+```
+
 ## Remover limitação pgpgadmin de executar apenas localmente
 
 ```bash
