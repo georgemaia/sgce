@@ -19,7 +19,7 @@ sudo apt-get install apache2 php5.6 libapache2-mod-php5.6 postgresql php5.6-pgsq
 ## Selecionar a versão padrão do PHP
 
 ```bash
-sudo update-alternatives --set php /usr/bin/php5.6
+sudo update-alternatives --set php /usr/bin/php5.6
 ```
 
 ## Alternar versão do PHP 7.3 para 5.6
@@ -28,6 +28,18 @@ sudo update-alternatives --set php /usr/bin/php5.6
 sudo a2dismod php7.3
 sudo a2enmod php5.6
 sudo service apache2 restart
+```
+
+## Habilitar short_open_tag
+
+A partir do PHP 5.3 foi depreciado, por isso a justificativa de ativar.
+
+```bash
+sudo nano /etc/php/5.6/php.ini
+```
+
+```apacheconf
+short_open_tag = on
 ```
 
 ## Remover limitação pgpgadmin de executar apenas localmente
@@ -57,6 +69,8 @@ edite a chave $config['encryptiuon_key'] e coloque uma chave válida de 32 carac
 ```bash
 sudo nano /var/www/html/sgce/system/application/config/constants.php
 ```
+
+altere o endereço informado na chave *URL_certificado*.
 
 ## Permissões de arquivos
 
@@ -92,5 +106,3 @@ CSVed - https://csved.sjfrancke.nl/
 [Manual SGCE IFRS 2014](docs/manual-sgce-ifrs.pdf)
 
 [Manual Organizador UTFPR 2017](docs/sgce_utfpr_organizador.pdf)
-
-
