@@ -35,7 +35,7 @@ sudo service apache2 restart
 A partir do PHP 5.3 foi depreciado, por isso a justificativa de ativar.
 
 ```bash
-sudo nano /etc/php/5.6/php.ini
+sudo nano /etc/php/5.6/apache2/php.ini
 ```
 
 ```apacheconf
@@ -47,12 +47,21 @@ short_open_tag = on
 Por padrão a biblioteca vem desativada. Para ativar, remova o comentário abaixo.
 
 ```bash
-sudo nano /etc/php/5.6/php.ini
+sudo nano /etc/php/5.6/apache2/php.ini
 ```
 
 ```apacheconf
 extension=php_gd2.dll 
 ```
+
+## Habilitar  PHP 5.6 FPM
+
+```bash
+a2enmod proxy_fcgi setenvif
+a2enconf php5.6-fpm
+```
+
+
 
 ## Remover limitação pgpgadmin de executar apenas localmente
 
