@@ -1,6 +1,6 @@
 # SGCE
 
-Procedimentos aplicados durante instalação do SGCE
+Procedimentos aplicados durante instalação do SGCE 1.0.3
 
 Repositório Oficial: https://softwarepublico.gov.br/social/sgce
 
@@ -30,6 +30,8 @@ sudo a2enmod php5.6
 sudo service apache2 restart
 ```
 
+
+
 ## Habilitar short_open_tag
 
 A partir do PHP 5.3 foi depreciado, por isso a justificativa de ativar.
@@ -54,12 +56,16 @@ sudo nano /etc/php/5.6/apache2/php.ini
 extension=php_gd2.dll 
 ```
 
+
+
 ## Habilitar  PHP 5.6 FPM
 
 ```bash
 a2enmod proxy_fcgi setenvif
 a2enconf php5.6-fpm
 ```
+
+
 
 ## Remover limitação pgpgadmin de executar apenas localmente
 
@@ -73,6 +79,8 @@ comentar a linha:
 #Require local
 ```
 
+
+
 ## Configurar o endereço da aplicação
 
 ```bash
@@ -83,6 +91,8 @@ edite a chave $config['base_url'] e coloque o endereço raiz do sistema
 
 edite a chave $config['encryptiuon_key'] e coloque uma chave válida de 32 caracteres alfanumericos
 
+
+
 ## Contantes utilizadas
 
 ```bash
@@ -91,15 +101,17 @@ sudo nano /var/www/html/sgce/system/application/config/constants.php
 
 altere o endereço informado na chave *URL_certificado*.
 
+
+
 ## DOMPDF
 
-Visão Geral: [http://www.kassas.nl/webshopkeeper/config/dompdf/www/](http://www.kassas.nl/webshopkeeper/config/dompdf/www/) [PDF](docs/dompdf_overview.pdf)
+Visão Geral: [link](http://www.kassas.nl/webshopkeeper/config/dompdf/www/) - [PDF](docs/dompdf_overview.pdf)
 
-Install: [http://www.kassas.nl/webshopkeeper/config/dompdf/www/install.php](http://www.kassas.nl/webshopkeeper/config/dompdf/www/install.php) [PDF](docs/dompdf_install.pdf)
+Install: [link](http://www.kassas.nl/webshopkeeper/config/dompdf/www/install.php) - [PDF](docs/dompdf_install.pdf)
 
-Usage: [http://www.kassas.nl/webshopkeeper/config/dompdf/www/usage.php](http://www.kassas.nl/webshopkeeper/config/dompdf/www/usage.php) [PDF](docs/dompdf_usage.pdf)
+Usage: [link](http://www.kassas.nl/webshopkeeper/config/dompdf/www/usage.php) - [PDF](docs/dompdf_usage.pdf)
 
-FAQ: [http://www.kassas.nl/webshopkeeper/config/dompdf/www/faq.php](http://www.kassas.nl/webshopkeeper/config/dompdf/www/faq.php) [PDF](docs/dompdf_faq.pdf)
+FAQ: [link](http://www.kassas.nl/webshopkeeper/config/dompdf/www/faq.php) - [PDF](docs/dompdf_faq.pdf)
 
 
 
@@ -112,17 +124,25 @@ FAQ: [http://www.kassas.nl/webshopkeeper/config/dompdf/www/faq.php](http://www.k
  sudo chmod 775 /var/www/html/sgce/* -R
 ```
 
+
+
 ## Imagem de Cabeçalho
 
 /sgce/system/application/views/includes/images/topo-certificados.jpg
+
+
 
 ## Programa Editor CSV para windows
 
 CSVed - https://csved.sjfrancke.nl/
 
+
+
 ## Arquivo Modelo de CSV
 
 [Modelo CSV](modelo_csv.csv)
+
+
 
 ## Referências
 
