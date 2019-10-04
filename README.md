@@ -93,7 +93,15 @@ altere o endereço informado na chave *URL_certificado*.
 
 ## DOMPDF
 
-Documentação: [http://www.kassas.nl/webshopkeeper/config/dompdf/www/](http://www.kassas.nl/webshopkeeper/config/dompdf/www/)
+Visão Geral: [http://www.kassas.nl/webshopkeeper/config/dompdf/www/](http://www.kassas.nl/webshopkeeper/config/dompdf/www/) [PDF](docs/dompdf_overview.pdf)
+
+Install: [http://www.kassas.nl/webshopkeeper/config/dompdf/www/install.php](http://www.kassas.nl/webshopkeeper/config/dompdf/www/install.php) [PDF](docs/dompdf_install.pdf)
+
+Usage: [http://www.kassas.nl/webshopkeeper/config/dompdf/www/usage.php](http://www.kassas.nl/webshopkeeper/config/dompdf/www/usage.php) [PDF](docs/dompdf_usage.pdf)
+
+FAQ: [http://www.kassas.nl/webshopkeeper/config/dompdf/www/faq.php](http://www.kassas.nl/webshopkeeper/config/dompdf/www/faq.php) [PDF](docs/dompdf_faq.pdf)
+
+
 
 ## Permissões de arquivos
 
