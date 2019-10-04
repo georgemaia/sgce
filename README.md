@@ -30,8 +30,6 @@ sudo a2enmod php5.6
 sudo service apache2 restart
 ```
 
-
-
 ## Habilitar short_open_tag
 
 A partir do PHP 5.3 foi depreciado, por isso a justificativa de ativar.
@@ -56,16 +54,12 @@ sudo nano /etc/php/5.6/apache2/php.ini
 extension=php_gd2.dll 
 ```
 
-
-
 ## Habilitar  PHP 5.6 FPM
 
 ```bash
 a2enmod proxy_fcgi setenvif
 a2enconf php5.6-fpm
 ```
-
-
 
 ## Remover limitação pgpgadmin de executar apenas localmente
 
@@ -79,8 +73,6 @@ comentar a linha:
 #Require local
 ```
 
-
-
 ## Configurar o endereço da aplicação
 
 ```bash
@@ -91,8 +83,6 @@ edite a chave $config['base_url'] e coloque o endereço raiz do sistema
 
 edite a chave $config['encryptiuon_key'] e coloque uma chave válida de 32 caracteres alfanumericos
 
-
-
 ## Contantes utilizadas
 
 ```bash
@@ -100,8 +90,6 @@ sudo nano /var/www/html/sgce/system/application/config/constants.php
 ```
 
 altere o endereço informado na chave *URL_certificado*.
-
-
 
 ## DOMPDF
 
@@ -113,7 +101,9 @@ Usage: [link](http://www.kassas.nl/webshopkeeper/config/dompdf/www/usage.php) - 
 
 FAQ: [link](http://www.kassas.nl/webshopkeeper/config/dompdf/www/faq.php) - [PDF](docs/dompdf_faq.pdf)
 
+[Versão 0.6.2 no Github](https://github.com/dompdf/dompdf/tree/0.6.2-hotfix)
 
+[Conver HTML to PDF with Dompdf - Sitepoint](https://www.sitepoint.com/convert-html-to-pdf-with-dompdf/)
 
 ## Permissões de arquivos
 
@@ -124,25 +114,17 @@ FAQ: [link](http://www.kassas.nl/webshopkeeper/config/dompdf/www/faq.php) - [PDF
  sudo chmod 775 /var/www/html/sgce/* -R
 ```
 
-
-
 ## Imagem de Cabeçalho
 
 /sgce/system/application/views/includes/images/topo-certificados.jpg
-
-
 
 ## Programa Editor CSV para windows
 
 CSVed - https://csved.sjfrancke.nl/
 
-
-
 ## Arquivo Modelo de CSV
 
 [Modelo CSV](modelo_csv.csv)
-
-
 
 ## Referências
 
