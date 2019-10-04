@@ -61,8 +61,6 @@ a2enmod proxy_fcgi setenvif
 a2enconf php5.6-fpm
 ```
 
-
-
 ## Remover limitação pgpgadmin de executar apenas localmente
 
 ```bash
@@ -92,6 +90,10 @@ sudo nano /var/www/html/sgce/system/application/config/constants.php
 ```
 
 altere o endereço informado na chave *URL_certificado*.
+
+## DOMPDF
+
+Documentação: [http://www.kassas.nl/webshopkeeper/config/dompdf/www/](http://www.kassas.nl/webshopkeeper/config/dompdf/www/)
 
 ## Permissões de arquivos
 
