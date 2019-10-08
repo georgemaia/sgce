@@ -1,8 +1,10 @@
 # SGCE
 
-Procedimentos aplicados durante instalação do SGCE 1.0.3
+Procedimentos aplicados durante instalação do SGCE 1.0.3 utilizando o framework Codeigniter versão 1.7.3.
 
 Repositório Oficial: https://softwarepublico.gov.br/social/sgce
+
+Projeto no Gitlab: [https://softwarepublico.gov.br/gitlab/sgce/sgce](https://softwarepublico.gov.br/gitlab/sgce/sgce)
 
 ## Pós-instalação Ubuntu Server
 
