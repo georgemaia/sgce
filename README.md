@@ -76,6 +76,16 @@ comentar a linha:
 ```ini
 #Require local
 ```
+## Cadastrar usuário do Banco Postgres
+
+```bash
+sudo -u postgres psql
+```
+
+```
+CREATE USER sgce SUPERUSER INHERIT CREATEDB CREATEROLE;
+ALTER USER sgce PASSWORD '12345678';
+```
 
 ## Configurar o endereço da aplicação
 
