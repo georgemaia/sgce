@@ -116,6 +116,12 @@ FAQ: [link](http://www.kassas.nl/webshopkeeper/config/dompdf/www/faq.php) - [PDF
  sudo chmod 775 /var/www/html/sgce/* -R
 ```
 
+## Refresh do apache
+
+```html
+<meta http-equiv="refresh" content="0; url=./sgce">
+```
+
 ## Imagem de Cabeçalho
 
 /sgce/system/application/views/includes/images/topo-certificados.jpg
