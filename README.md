@@ -76,6 +76,7 @@ comentar a linha:
 ```ini
 #Require local
 ```
+
 ## Cadastrar usuário do Banco Postgres
 
 ```bash
