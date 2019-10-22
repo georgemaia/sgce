@@ -2,7 +2,9 @@
 
 Procedimentos aplicados durante instalação do SGCE 1.0.3 utilizando o framework Codeigniter versão 1.7.3.
 
-Repositório Oficial: https://softwarepublico.gov.br/social/sgce
+Página Oficial: [https://dtic.unipampa.edu.br/sgce](https://dtic.unipampa.edu.br/sgce)
+
+Repositório Oficial: [https://softwarepublico.gov.br/social/sgce](https://softwarepublico.gov.br/social/sgce)
 
 Projeto no Gitlab: [https://softwarepublico.gov.br/gitlab/sgce/sgce](https://softwarepublico.gov.br/gitlab/sgce/sgce)
 
@@ -74,6 +76,16 @@ comentar a linha:
 ```ini
 #Require local
 ```
+## Cadastrar usuário do Banco Postgres
+
+```bash
+sudo -u postgres psql
+```
+
+```
+CREATE USER sgce SUPERUSER INHERIT CREATEDB CREATEROLE;
+ALTER USER sgce PASSWORD '12345678';
+```
 
 ## Configurar o endereço da aplicação
 
@@ -106,6 +118,27 @@ FAQ: [link](http://www.kassas.nl/webshopkeeper/config/dompdf/www/faq.php) - [PDF
 [Versão 0.6.2 no Github](https://github.com/dompdf/dompdf/tree/0.6.2-hotfix)
 
 [Conver HTML to PDF with Dompdf - Sitepoint](https://www.sitepoint.com/convert-html-to-pdf-with-dompdf/)
+
+## Constantes 
+
+Para configurar as mensagens, utilize as seguintes constantes:
+
+**NOME_PARTICIPANTE** - Especifica que nesta posição do texto será escrito o nome do participante que receberá o certificado.
+
+**NOME_EVENTO** - Especifica o nome do evento que emitiu a notificação.
+
+**EMAIL_EVENTO** - Especifica o e-mail de contato dos organizadores do evento.
+
+**LINK_CERTIFICADO** - Imprime o link que será utilizado para emissão do certificado.
+
+**IDENTIFICACAO_CERTIFICADO** - Escreve o código de validação do certificado. 
+
+**DESCRICAO_STATUS** - Informa o status do certificado (se validado ou revogado).
+
+**DESCRICAO_JUSTIFICATIVA** - Informa a justificativa do Avaliador. 
+
+**NOTA**: Os campos NOME_PARTICIPANTE, NOME_EVENTO e EMAIL_EVENTO podem ser utilizados na configuração de todas as mensagens, pois referem-se à pessoa que receberá o e-mail. das duas mensagens. O campo LINK_CERTIFICADO é específico para a notificação de Emissão e os campos
+IDENTIFICAÇÃO_CERTIFICADO, DESCRICAO_STATUS e DESCRICAO_JUSTIFICATIVA são usados apenas na notificação de validação/revogação de certificados.
 
 ## Permissões de arquivos
 
