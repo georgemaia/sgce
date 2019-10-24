@@ -162,7 +162,9 @@ IDENTIFICAÇÃO_CERTIFICADO, DESCRICAO_STATUS e DESCRICAO_JUSTIFICATIVA são usa
 
 ## Programa Editor CSV para windows
 
-CSVed - https://csved.sjfrancke.nl/
+CSVed - [https://csved.sjfrancke.nl/](https://csved.sjfrancke.nl/)
+
+Visual Studio Code Extension Edit CSV - [https://marketplace.visualstudio.com/items?itemName=janisdd.vscode-edit-csv](https://marketplace.visualstudio.com/items?itemName=janisdd.vscode-edit-csv)
 
 ## Arquivo Modelo de CSV
 
