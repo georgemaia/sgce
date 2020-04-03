@@ -172,6 +172,10 @@ Visual Studio Code Extension Edit CSV - [https://marketplace.visualstudio.com/it
 
 ## Configurar envio de email
 
+Caso seja configurado com um email do gmail, deve-se ativar o envio por plataformas menos seguras:
+
+[https://myaccount.google.com/lesssecureapps?pli=1](https://myaccount.google.com/lesssecureapps?pli=1)
+
 /system/application/config/email.php
 
 ```php
@@ -189,9 +193,24 @@ Visual Studio Code Extension Edit CSV - [https://marketplace.visualstudio.com/it
     $config['mail_from_name']    = 'Nao Responder';
     $config['errors_to_address'] = 'erro@unipampa.edu.br';
 ```
+/sgce/system/libraries/Email.php
+
 
 Depois preencher a configuração dentro do menu Sistema, (inclusive o DNS) para que ele possa testar o envio de e-mails antes de enviá-los adequadamente.
 
+## SSH
+
+Instalar
+
+```bash
+sudo apt-get install openssh-server
+```
+
+Ativar
+
+```bash
+sudo service ssh status
+```
 
 ## Referências
 
