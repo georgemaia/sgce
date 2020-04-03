@@ -174,6 +174,22 @@ Visual Studio Code Extension Edit CSV - [https://marketplace.visualstudio.com/it
 
 /system/application/config/email.php
 
+```php
+    $config['protocol']  = 'smtp';
+    $config['smtp_host'] = 'smtp.unipampa.edu.br';
+    $config['smtp_user'] = ''; 
+    $config['smtp_pass'] = ''; 
+    $config['smtp_port'] = 25;
+    $config['charset']   = 'utf-8';
+    $config['wordwrap']  = TRUE;
+    $config['mailtype']  = 'html';
+
+    //campos adicionais
+    $config['mail_from_address'] = 'nao.responder@unipampa.edu.br';
+    $config['mail_from_name']    = 'Nao Responder';
+    $config['errors_to_address'] = 'erro@unipampa.edu.br';
+```
+
 Depois preencher a configuração dentro do menu Sistema, (inclusive o DNS) para que ele possa testar o envio de e-mails antes de enviá-los adequadamente.
 
 
