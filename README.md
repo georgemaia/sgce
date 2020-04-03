@@ -170,6 +170,13 @@ Visual Studio Code Extension Edit CSV - [https://marketplace.visualstudio.com/it
 
 [Modelo CSV](modelo_csv.csv)
 
+## Configurar envio de email
+
+/system/application/config/email.php
+
+Depois preencher a configuração dentro do menu Sistema, (inclusive o DNS) para que ele possa testar o envio de e-mails antes de enviá-los adequadamente.
+
+
 ## Referências
 
 [Apresentação V Workshop de TIC das IFES - Unipampa 2011](docs/Apresentacao-VWTICIFES-2011.pdf)
