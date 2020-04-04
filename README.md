@@ -1,6 +1,6 @@
 # SGCE
 
-Procedimentos aplicados durante instalação do SGCE 1.0.3 utilizando o framework Codeigniter versão 1.7.3.
+Procedimentos aplicados durante instalação do SGCE 1.0.3 utilizando o framework [Codeigniter](https://codeigniter.com/) versão 1.7.3.
 
 Página Oficial: [https://dtic.unipampa.edu.br/sgce](https://dtic.unipampa.edu.br/sgce)
 
