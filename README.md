@@ -212,6 +212,21 @@ Ativar
 sudo service ssh status
 ```
 
+## Ativar o log no Codeigniter
+
+* torna a pasta /application/logs com permissões de escrita
+
+* Edite o arquivo  /application/config/config.php de 1 a 4, com o numero mais alto mais detalho o log
+
+```php
+    $config['log_threshold'] = 1;
+```
+
+* use log_message('error', 'Some variable did not contain a value.');
+
+* Para enviar email, você precisa extender o  core CI_Exceptions class method log_exceptions(). 
+
+
 ## Referências
 
 [Apresentação V Workshop de TIC das IFES - Unipampa 2011](docs/Apresentacao-VWTICIFES-2011.pdf)
