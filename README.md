@@ -225,3 +225,5 @@ sudo service ssh status
 [Manual SGCE IFRS 2014](docs/manual-sgce-ifrs.pdf)
 
 [Manual Organizador UTFPR 2017](docs/sgce_utfpr_organizador.pdf)
+
+[CodeIgniter User Guide Version 1.7.2](docs/CodeIgniter_User_Guide_Version_1.7.2.pdf)
