@@ -8,9 +8,15 @@ Repositório Oficial: [https://softwarepublico.gov.br/social/sgce](https://softw
 
 Projeto no Gitlab: [https://softwarepublico.gov.br/gitlab/sgce/sgce](https://softwarepublico.gov.br/gitlab/sgce/sgce)
 
+---
+
 ## Pós-instalação Ubuntu Server
 
-Entre com o comando $sudo passwd root, ele irá solicitar a senha que você cadastrou na instalação e depois pedirá para você inserir uma senha para o usuário root.
+Entre com o comando abaixo , ele irá solicitar a senha que você cadastrou na instalação e depois pedirá para você inserir uma senha para o usuário root.
+
+ ```$sudo passwd root```
+
+---
 
 ## Instalação Apache, PHP 5 e PostgreSQL
 
@@ -19,12 +25,15 @@ sudo add-apt-repository ppa:ondrej/php
 sudo apt-get update 
 sudo apt-get install apache2 php5.6 libapache2-mod-php5.6 postgresql php5.6-pgsql phppgadmin php-gettext php5.6-gd php5.6-mcrypt php5.6-intl php5.6-cli php5.6-soap php5.6-curl php5.6-mbstring php5.6-xml php5.6-fpm
 ```
+---
 
 ## Selecionar a versão padrão do PHP
 
 ```bash
 sudo update-alternatives --set php /usr/bin/php5.6
 ```
+
+---
 
 ## Alternar versão do PHP 7.3 para 5.6
 
@@ -33,6 +42,8 @@ sudo a2dismod php7.3
 sudo a2enmod php5.6
 sudo service apache2 restart
 ```
+
+---
 
 ## Habilitar short_open_tag
 
@@ -46,6 +57,8 @@ sudo nano /etc/php/5.6/apache2/php.ini
 short_open_tag = on
 ```
 
+---
+
 ## Ativar a biblioteca GD2
 
 Por padrão a biblioteca vem desativada. Para ativar, remova o comentário abaixo.
@@ -58,12 +71,16 @@ sudo nano /etc/php/5.6/apache2/php.ini
 extension=php_gd2.dll 
 ```
 
+---
+
 ## Habilitar  PHP 5.6 FPM
 
 ```bash
 a2enmod proxy_fcgi setenvif
 a2enconf php5.6-fpm
 ```
+
+---
 
 ## Remover limitação pgpgadmin de executar apenas localmente
 
@@ -77,6 +94,8 @@ comentar a linha:
 #Require local
 ```
 
+---
+
 ## Cadastrar usuário do Banco Postgres
 
 ```bash
@@ -88,6 +107,8 @@ CREATE USER sgce SUPERUSER INHERIT CREATEDB CREATEROLE;
 ALTER USER sgce PASSWORD '12345678';
 ```
 
+---
+
 ## Configurar o endereço da aplicação
 
 ```bash
@@ -98,6 +119,8 @@ edite a chave $config['base_url'] e coloque o endereço raiz do sistema
 
 edite a chave $config['encryptiuon_key'] e coloque uma chave válida de 32 caracteres alfanumericos
 
+---
+
 ## Contantes utilizadas
 
 ```bash
@@ -105,6 +128,8 @@ sudo nano /var/www/html/sgce/system/application/config/constants.php
 ```
 
 altere o endereço informado na chave *URL_certificado*.
+
+---
 
 ## DOMPDF
 
@@ -119,6 +144,8 @@ FAQ: [link](http://www.kassas.nl/webshopkeeper/config/dompdf/www/faq.php) - [PDF
 [Versão 0.6.2 no Github](https://github.com/dompdf/dompdf/tree/0.6.2-hotfix)
 
 [Conver HTML to PDF with Dompdf - Sitepoint](https://www.sitepoint.com/convert-html-to-pdf-with-dompdf/)
+
+---
 
 ## Constantes 
 
@@ -141,6 +168,8 @@ Para configurar as mensagens, utilize as seguintes constantes:
 **NOTA**: Os campos NOME_PARTICIPANTE, NOME_EVENTO e EMAIL_EVENTO podem ser utilizados na configuração de todas as mensagens, pois referem-se à pessoa que receberá o e-mail. das duas mensagens. O campo LINK_CERTIFICADO é específico para a notificação de Emissão e os campos
 IDENTIFICAÇÃO_CERTIFICADO, DESCRICAO_STATUS e DESCRICAO_JUSTIFICATIVA são usados apenas na notificação de validação/revogação de certificados.
 
+---
+
 ## Permissões de arquivos
 
 ```bash
@@ -150,15 +179,21 @@ IDENTIFICAÇÃO_CERTIFICADO, DESCRICAO_STATUS e DESCRICAO_JUSTIFICATIVA são usa
  sudo chmod 775 /var/www/html/sgce/* -R
 ```
 
+---
+
 ## Refresh do apache
 
 ```html
 <meta http-equiv="refresh" content="0; url=./sgce">
 ```
 
+---
+
 ## Imagem de Cabeçalho
 
 /sgce/system/application/views/includes/images/topo-certificados.jpg
+
+---
 
 ## Programa Editor CSV para windows
 
@@ -166,9 +201,13 @@ CSVed - [https://csved.sjfrancke.nl/](https://csved.sjfrancke.nl/)
 
 Visual Studio Code Extension Edit CSV - [https://marketplace.visualstudio.com/items?itemName=janisdd.vscode-edit-csv](https://marketplace.visualstudio.com/items?itemName=janisdd.vscode-edit-csv)
 
+---
+
 ## Arquivo Modelo de CSV
 
 [Modelo CSV](modelo_csv.csv)
+
+---
 
 ## Configurar envio de email
 
@@ -198,6 +237,45 @@ Caso seja configurado com um email do gmail, deve-se ativar o envio por platafor
 
 Depois preencher a configuração dentro do menu Sistema, (inclusive o DNS) para que ele possa testar o envio de e-mails antes de enviá-los adequadamente.
 
+### Alterar método de envio para o sendmail
+
+#### Passo 1: Instalar o sendmail
+
+```
+$ sudo apt-get install sendmail
+```
+
+#### Passo 2: Configure o sendmail
+
+```
+$ sudo sendmailconfig
+```
+
+#### Passo 3 (Opicional): Edite o arquivo hosts
+
+```
+$ sudo vim /etc/hosts
+```
+
+#### Passo 4: Reinicie o servidor Web 
+
+Para servidores Apache:
+
+```
+$ sudo service apache2 restart
+```
+
+Para servidores Nginx:
+
+```
+$ sudo service nginx restart
+```
+
+Pronto!
+
+---
+
+
 ## SSH
 
 Instalar
@@ -212,6 +290,8 @@ Ativar
 sudo service ssh status
 ```
 
+---
+
 ## Ativar o log no Codeigniter
 
 * torna a pasta /application/logs com permissões de escrita
@@ -225,6 +305,8 @@ sudo service ssh status
 * use log_message('error', 'Some variable did not contain a value.');
 
 * Para enviar email, você precisa extender o  core CI_Exceptions class method log_exceptions(). 
+
+---
 
 
 ## Referências
@@ -242,3 +324,5 @@ sudo service ssh status
 [Manual Organizador UTFPR 2017](docs/sgce_utfpr_organizador.pdf)
 
 [CodeIgniter User Guide Version 1.7.2](docs/CodeIgniter_User_Guide_Version_1.7.2.pdf)
+
+[Enable PHP mail() function on Ubuntu](http://researchhubs.com/post/computing/linux-basic/enable-php-mail-function-to-work-on-ubuntu.html)
