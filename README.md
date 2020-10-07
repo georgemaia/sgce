@@ -1,6 +1,8 @@
 # SGCE
 
-Procedimentos aplicados durante instalação do SGCE 1.0.3 utilizando o framework [Codeigniter](https://codeigniter.com/) versão 1.7.3.
+[![Product Name Screen Shot][product-screenshot]](https://dtic.unipampa.edu.br/sgce)
+
+Procedimentos aplicados durante instalação do SGCE 1.0.3 utilizando o framework [Codeigniter](https://codeigniter.com/) versão 1.7.3 no Ubuntu.
 
 Página Oficial: [https://dtic.unipampa.edu.br/sgce](https://dtic.unipampa.edu.br/sgce)
 
@@ -8,17 +10,20 @@ Repositório Oficial: [https://softwarepublico.gov.br/social/sgce](https://softw
 
 Projeto no Gitlab: [https://softwarepublico.gov.br/gitlab/sgce/sgce](https://softwarepublico.gov.br/gitlab/sgce/sgce)
 
----
 
-## Pós-instalação Ubuntu Server
+## Configuração para Desenvolvimento
+
+### Pós-instalação Ubuntu Server
 
 Entre com o comando abaixo , ele irá solicitar a senha que você cadastrou na instalação e depois pedirá para você inserir uma senha para o usuário root.
 
- ```$sudo passwd root```
+ ```
+ $sudo passwd root
+ ```
 
 ---
 
-## Instalação Apache, PHP 5 e PostgreSQL
+### Instalação Apache, PHP 5 e PostgreSQL
 
 ```bash
 sudo add-apt-repository ppa:ondrej/php 
@@ -27,7 +32,7 @@ sudo apt-get install apache2 php5.6 libapache2-mod-php5.6 postgresql php5.6-pgsq
 ```
 ---
 
-## Selecionar a versão padrão do PHP
+### Selecionar a versão padrão do PHP
 
 ```bash
 sudo update-alternatives --set php /usr/bin/php5.6
@@ -35,7 +40,7 @@ sudo update-alternatives --set php /usr/bin/php5.6
 
 ---
 
-## Alternar versão do PHP 7.3 para 5.6
+### Alternar versão do PHP 7.3 para 5.6
 
 ```bash
 sudo a2dismod php7.3
@@ -45,7 +50,7 @@ sudo service apache2 restart
 
 ---
 
-## Habilitar short_open_tag
+### Habilitar short_open_tag
 
 A partir do PHP 5.3 foi depreciado, por isso a justificativa de ativar.
 
@@ -59,7 +64,7 @@ short_open_tag = on
 
 ---
 
-## Ativar a biblioteca GD2
+### Ativar a biblioteca GD2
 
 Por padrão a biblioteca vem desativada. Para ativar, remova o comentário abaixo.
 
@@ -73,7 +78,7 @@ extension=php_gd2.dll
 
 ---
 
-## Habilitar  PHP 5.6 FPM
+### Habilitar  PHP 5.6 FPM
 
 ```bash
 a2enmod proxy_fcgi setenvif
@@ -82,7 +87,7 @@ a2enconf php5.6-fpm
 
 ---
 
-## Remover limitação pgpgadmin de executar apenas localmente
+### Remover limitação pgpgadmin de executar apenas localmente
 
 ```bash
 sudo nano /etc/apache2/conf-enabled/phppgadmin.conf
@@ -96,7 +101,7 @@ comentar a linha:
 
 ---
 
-## Cadastrar usuário do Banco Postgres
+### Cadastrar usuário do Banco Postgres
 
 ```bash
 sudo -u postgres psql
@@ -109,7 +114,7 @@ ALTER USER sgce PASSWORD '12345678';
 
 ---
 
-## Configurar o endereço da aplicação
+### Configurar o endereço da aplicação
 
 ```bash
 sudo nano /var/www/html/sgce/system/application/config/config.php
@@ -121,7 +126,7 @@ edite a chave $config['encryptiuon_key'] e coloque uma chave válida de 32 carac
 
 ---
 
-## Contantes utilizadas
+### Contantes utilizadas
 
 ```bash
 sudo nano /var/www/html/sgce/system/application/config/constants.php
@@ -131,7 +136,7 @@ altere o endereço informado na chave *URL_certificado*.
 
 ---
 
-## DOMPDF
+### DOMPDF
 
 Visão Geral: [link](http://www.kassas.nl/webshopkeeper/config/dompdf/www/) - [PDF](docs/dompdf_overview.pdf)
 
@@ -147,7 +152,7 @@ FAQ: [link](http://www.kassas.nl/webshopkeeper/config/dompdf/www/faq.php) - [PDF
 
 ---
 
-## Constantes 
+### Constantes 
 
 Para configurar as mensagens, utilize as seguintes constantes:
 
@@ -170,7 +175,7 @@ IDENTIFICAÇÃO_CERTIFICADO, DESCRICAO_STATUS e DESCRICAO_JUSTIFICATIVA são usa
 
 ---
 
-## Permissões de arquivos
+### Permissões de arquivos
 
 ```bash
  sudo chown www-data:www-data /var/www/html/sgce/ 
@@ -181,7 +186,7 @@ IDENTIFICAÇÃO_CERTIFICADO, DESCRICAO_STATUS e DESCRICAO_JUSTIFICATIVA são usa
 
 ---
 
-## Refresh do apache
+### Refresh do apache
 
 ```html
 <meta http-equiv="refresh" content="0; url=./sgce">
@@ -189,13 +194,13 @@ IDENTIFICAÇÃO_CERTIFICADO, DESCRICAO_STATUS e DESCRICAO_JUSTIFICATIVA são usa
 
 ---
 
-## Imagem de Cabeçalho
+### Imagem de Cabeçalho
 
 /sgce/system/application/views/includes/images/topo-certificados.jpg
 
 ---
 
-## Programa Editor CSV para windows
+### Programa Editor CSV para windows
 
 CSVed - [https://csved.sjfrancke.nl/](https://csved.sjfrancke.nl/)
 
@@ -203,13 +208,13 @@ Visual Studio Code Extension Edit CSV - [https://marketplace.visualstudio.com/it
 
 ---
 
-## Arquivo Modelo de CSV
+### Arquivo Modelo de CSV
 
 [Modelo CSV](modelo_csv.csv)
 
 ---
 
-## Configurar envio de email
+### Configurar envio de email
 
 Caso seja configurado com um email do gmail, deve-se ativar o envio por plataformas menos seguras:
 
@@ -237,27 +242,27 @@ Caso seja configurado com um email do gmail, deve-se ativar o envio por platafor
 
 Depois preencher a configuração dentro do menu Sistema, (inclusive o DNS) para que ele possa testar o envio de e-mails antes de enviá-los adequadamente.
 
-### Alterar método de envio para o sendmail
+#### Alterar método de envio para o sendmail
 
-#### Passo 1: Instalar o sendmail
+##### Passo 1: Instalar o sendmail
 
 ```
 $ sudo apt-get install sendmail
 ```
 
-#### Passo 2: Configure o sendmail
+##### Passo 2: Configure o sendmail
 
 ```
 $ sudo sendmailconfig
 ```
 
-#### Passo 3 (Opicional): Edite o arquivo hosts
+##### Passo 3 (Opicional): Edite o arquivo hosts
 
 ```
 $ sudo vim /etc/hosts
 ```
 
-#### Passo 4: Reinicie o servidor Web 
+##### Passo 4: Reinicie o servidor Web 
 
 Para servidores Apache:
 
@@ -276,7 +281,7 @@ Pronto!
 ---
 
 
-## SSH
+### SSH
 
 Instalar
 
@@ -292,7 +297,7 @@ sudo service ssh status
 
 ---
 
-## Ativar o log no Codeigniter
+### Ativar o log no Codeigniter
 
 * torna a pasta /application/logs com permissões de escrita
 
@@ -305,6 +310,16 @@ sudo service ssh status
 * use log_message('error', 'Some variable did not contain a value.');
 
 * Para enviar email, você precisa extender o  core CI_Exceptions class method log_exceptions(). 
+
+---
+
+## Contributing
+
+1. Faça o _fork_ do projeto (<https://github.com/yourname/yourproject/fork>)
+2. Crie uma _branch_ para sua modificação (`git checkout -b feature/fooBar`)
+3. Faça o _commit_ (`git commit -am 'Add some fooBar'`)
+4. _Push_ (`git push origin feature/fooBar`)
+5. Crie um novo _Pull Request_
 
 ---
 
@@ -326,3 +341,6 @@ sudo service ssh status
 [CodeIgniter User Guide Version 1.7.2](docs/CodeIgniter_User_Guide_Version_1.7.2.pdf)
 
 [Enable PHP mail() function on Ubuntu](http://researchhubs.com/post/computing/linux-basic/enable-php-mail-function-to-work-on-ubuntu.html)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[product-screenshot]: img/indice.png
